@@ -1,0 +1,67 @@
+@import '../../utils/config.less';
+
+.container{
+    padding: 3em;
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+    align-items: center;
+    .btn{
+        background-color: @primaryColor;
+        font-size: 1.2em;
+        border: none;
+        padding: 0.3em 1em;
+        border-radius: 1em;
+        cursor: pointer;
+        &:hover{
+            box-shadow: 2px 1px 34px  @primaryColorLight;
+        }
+    }
+    .leftContainer{
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        .title{
+            color: @white;
+            margin-top: 0;
+            font-style: italic;
+        }
+        .logo{
+            width: 2.5em;
+            cursor: pointer;
+            background-color: @primaryColor;
+            border-radius: 50%;
+        }
+    }
+    .menuContainer{
+        display: flex;
+        gap: 1em;
+        .menu{
+            padding: .3em;
+            border-radius: .5em;
+            color: white;
+            opacity: .7;
+            margin: 0;
+            cursor: pointer;
+            &.active{
+                color: @primaryColor;
+                opacity: 1;
+            }
+        }
+    }
+}
+.showProfileContainer{
+    backdrop-filter: blur(6px);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    .showProfile{
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: @primaryColor;
+        border-radius: 50%;
+    }
+}
